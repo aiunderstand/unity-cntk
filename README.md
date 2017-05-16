@@ -18,8 +18,8 @@ and http://stackoverflow.com/questions/36527985/dllnotfoundexception-in-while-bu
   - Cntk.Math--2.0rc2.dll
   - libiomp5md.dll
   - mkl_cntk_p.dll
-  - Cntk.Core.Managed--2.0rc2.dll
-  - Cntk.Core.CSBinding--2.0rc2.dll
+  - Cntk.Core.Managed-2.0rc2.dll
+  - Cntk.Core.CSBinding-2.0rc2.dll
   - cublas64_80.dll
   - cudart64_80.dll
   - cudnn64_5.dll
