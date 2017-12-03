@@ -48,6 +48,9 @@ For training result should look like
 
 # Create New Unity-CNTK Project
 1) Create new project and in File > Build settings > Player settings set scripting runtime to 4.6 (see image below), restart is required.
-2) Add the Cntk.Core.Managed-<VERSION>.dll to your Asset folder
+
 ![unity_net46setting](https://user-images.githubusercontent.com/6376127/33528346-0ba4aeb2-d85f-11e7-81fa-9ed0d8113612.png)
 
+2) Add the Cntk.Core.Managed-<VERSION>.dll to your Asset folder
+
+[Note. For the managed dll to work, the native dll's need to be present for unity (see step 2 from "how to run this demo project")].
