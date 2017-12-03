@@ -1,6 +1,6 @@
 # unity-cntk
 
-Version history
+Version history  <br />
 [3-12-2017] Updated text and demo for Unity 2017.3 beta 11 with cntk 2.3 <br />
 [14-5-2017] Initial commit for Unity 2017 beta 5 with cntk 2.0rc 2 <br />
 
