@@ -6,7 +6,7 @@ Version history  <br />
 
 Unity 2017.3 (.net 4.6 support!) with CNTK 2.3 demo (now featuring both training and test API's)
 
-See thread https://github.com/Microsoft/CNTK/issues/960 for some history 
+See thread https://github.com/Microsoft/CNTK/issues/960 for some history and see this link for more CNTK training examples in c#: https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp/Common
 
 Tested With/Requires
 - Unity 2017, download https://unity3d.com/get-unity/download
