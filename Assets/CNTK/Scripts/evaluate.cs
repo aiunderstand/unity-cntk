@@ -4,16 +4,22 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-public class test : MonoBehaviour {
+public class evaluate : MonoBehaviour {
 
     Function model;
-
+    public bool useGPU = false;
+    DeviceDescriptor device;
+   
     // Use this for initialization
     void Start () {
+        if (useGPU)
+            device = DeviceDescriptor.GPUDevice(0);
+        else
+            device = DeviceDescriptor.CPUDevice;
 
         //load model
-        string modelPath = System.IO.Path.Combine(Environment.CurrentDirectory, @"Assets\CNTK\model.dnn");
-        model = Function.LoadModel(modelPath, DeviceDescriptor.GPUDevice(0));
+        string modelPath = System.IO.Path.Combine(Environment.CurrentDirectory, @"Assets\CNTK\Models\mymodel.model");
+        model = Function.Load(modelPath, device);
 
         Evaluate();
 	}
@@ -32,7 +38,7 @@ public class test : MonoBehaviour {
             seqData.Add(float.Parse(str));
         
         // Create input value using OneHot vector data.
-        var inputValue = Value.CreateBatch(inputVar.Shape, seqData, DeviceDescriptor.GPUDevice(0));
+        var inputValue = Value.CreateBatch(inputVar.Shape, seqData, device);
 
         // Build input data map.
         var inputDataMap = new Dictionary<Variable, Value>();
@@ -46,7 +52,7 @@ public class test : MonoBehaviour {
         outputDataMap.Add(outputVar, null);
 
         // Evaluate the model.
-        model.Evaluate(inputDataMap, outputDataMap, DeviceDescriptor.GPUDevice(0));
+        model.Evaluate(inputDataMap, outputDataMap, device);
 
         // Get output result
        
